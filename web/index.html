@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8" />
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+  <meta name="description" content="Hotel App Flutter Web" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Hotel App</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- ========== Firebase SDK ekleniyor ========== -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js"></script>
+
+  <script>
+    // Senin verdiğin Firebase web config objesi:
+    const firebaseConfig = {
+      apiKey: "AIzaSyB3DzSQZJ11WSHYEJfmsrn4nmUiJuAsM1k",
+      authDomain: "flutter-project-2bc93.firebaseapp.com",
+      projectId: "flutter-project-2bc93",
+      storageBucket: "flutter-project-2bc93.firebasestorage.app",
+      messagingSenderId: "762868673100",
+      appId: "1:762868673100:web:593e354dea3951b9fb62e9",
+      measurementId: "G-5FW3CF8GSR"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <!-- ========== Firebase SDK sonu ========== -->
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="HotelApp" />
+  <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+</head>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+# analysis_options.yaml
+
+include: package:lints/recommended.yaml
+
+linter:
+  rules:
+    # İstersen bu kuralları aç/kapa
+    # avoid_print: false
+    # prefer_single_quotes: true
+
+analyzer:
+  exclude:
+    - '**/.dart_tool/**'
+    - '**/build/**'
+    - '**/ios/Pods/**'
+    - '**/android/.gradle/**'
+
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false

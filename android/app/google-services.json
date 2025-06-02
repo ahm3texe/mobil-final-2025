@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "458472859963",
+    "project_id": "versushotels",
+    "storage_bucket": "versushotels.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458472859963:android:bdfe5037fb7ca98742af1e",
+        "android_client_info": {
+          "package_name": "com.company.versusHotels"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg7ghSbkpLYJY4JwbKIvlH0hYIe485nM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
