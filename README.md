@@ -6,12 +6,13 @@
 
 1. [Genel Bakış](#genel-bakış)  
 2. [Özellikler](#özellikler)  
-3. [Kurulum ve Çalıştırma](#kurulum-ve-çalıştırma)  
-4. [Klasör Yapısı](#klasör-yapısı)  
-5. [Kullanılan Teknolojiler](#kullanılan-teknolojiler)  
-6. [Ekip ve Görev Dağılımı](#ekip-ve-görev-dağılımı)  
-7. [Gelecek Planları](#gelecek-planları)  
-8. [İletişim](#iletişim)
+3. [Klasör Yapısı](#klasör-yapısı)  
+4. [Kullanılan Teknolojiler](#kullanılan-teknolojiler)  
+5. [Ekip ve Görev Dağılımı](#ekip-ve-görev-dağılımı)  
+6. [Gelecek Planları](#gelecek-planları)  
+7. [İletişim](#iletişim)
+
+  - ![image](https://github.com/user-attachments/assets/c9406979-ab4d-4259-9cd4-5d6db9a1d748)
 
 ## Genel Bakış
 
@@ -68,7 +69,7 @@ Projede başlangıçta “dummy” (geçici) kimlik doğrulama (register/login) 
 
 ## Ekip ve Görev Dağılımı
 
-### 🧑‍💻 Ömer Faruk Pehlivan
+### Ömer Faruk Pehlivan
 
 **Görevler:**
 
@@ -91,7 +92,7 @@ Projede başlangıçta “dummy” (geçici) kimlik doğrulama (register/login) 
 
 ---
 
-### 🧑‍💻 Ahmet Şafak Yıldırım
+### Ahmet Şafak Yıldırım
 
 **Görevler:**
 
@@ -103,7 +104,7 @@ Projede başlangıçta “dummy” (geçici) kimlik doğrulama (register/login) 
 
 ---
 
-### 🧑‍🎨 Ogün Şahin
+### Ogün Şahin
 
 **Görevler:**
 
@@ -124,18 +125,8 @@ Projede başlangıçta “dummy” (geçici) kimlik doğrulama (register/login) 
 - Çoklu dil desteği için tam işlevsellik.
 
 ---
-
-## İletişim
-
-Proje hakkında geri bildirimde bulunmak için:
-
-- 📧 **E-posta:** [info@versushotels.com](mailto:info@versushotels.com)
-- 📞 **Telefon:** +90 123 456 7890
-- 💻 **GitHub:** [VersusHotels Repository](#) <!-- Gerçek link buraya eklenebilir -->
-
----
  
-  - ![image](https://github.com/user-attachments/assets/c9406979-ab4d-4259-9cd4-5d6db9a1d748)
+
   - ![image](https://github.com/user-attachments/assets/c1651f26-70a8-46c0-ada3-ed33053c9c1c)
   - ![image](https://github.com/user-attachments/assets/f6339ee9-acf6-4af5-a3a8-723c3b3c280a)
   - *main.dart daki importlar ve projenin supabase api key bağlantısı*
