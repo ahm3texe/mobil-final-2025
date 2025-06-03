@@ -138,6 +138,7 @@ Proje hakkında geri bildirimde bulunmak için:
   - ![image](https://github.com/user-attachments/assets/c9406979-ab4d-4259-9cd4-5d6db9a1d748)
   - ![image](https://github.com/user-attachments/assets/c1651f26-70a8-46c0-ada3-ed33053c9c1c)
   - ![image](https://github.com/user-attachments/assets/f6339ee9-acf6-4af5-a3a8-723c3b3c280a)
+  - *main.dart daki importlar ve projenin supabase api key bağlantısı*
 
 
 
