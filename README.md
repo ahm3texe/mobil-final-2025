@@ -55,6 +55,85 @@ Projede başlangıçta “dummy” (geçici) kimlik doğrulama (register/login) 
   - Ad, e-posta ve mesaj alanları olan basit bir form.  
   - “Gönder” butonuna tıklanınca cihazın e-posta uygulaması açılır (mailto).  
   - Sayfanın alt kısmında tıklanabilir e-posta ve telefon numarası.
+  - 
+## Kullanılan Teknolojiler
+
+- **Flutter & Dart:** Çapraz platform mobil uygulama geliştirme.
+- **Supabase:** Otel verileri için Storage ve gelecekte Authentication/Backend.
+- **SharedPreferences:** Kullanıcı girişi ve ayarlar için yerel depolama.
+- **Provider:** Durum yönetimi (State Management).
+- **mailto:** İletişim formu için cihaz e-posta uygulaması entegrasyonu.
+
+---
+
+## Ekip ve Görev Dağılımı
+
+### 🧑‍💻 Ömer Faruk Pehlivan
+
+**Görevler:**
+
+- Uygulama mimarisini kurgulamak ve tüm sayfa akışlarını tasarlamak.
+- Flutter’da tasarımın koda dökülmesi ve frontend implementasyonu.
+
+**Kapsam:**
+
+- `Login/Signup` akışı
+- `home_page.dart`
+- `custom_drawer.dart`
+- Otel kartları: `hotel_card.dart`, `hotel_list_card.dart`
+- Otel detay sayfası: `hotel_detail_page.dart`
+- `favorites_page.dart`
+- `comparison_page.dart`
+- `settings_page.dart`
+- `providers/compare_provider.dart`, `providers/settings_provider.dart`
+- `widgets/custom_app_bar.dart`
+- Genel tema düzenlemeleri (AppBar, buton, renk şeması)
+
+---
+
+### 🧑‍💻 Ahmet Şafak Yıldırım
+
+**Görevler:**
+
+- Supabase’e veritabanı bağlantısını yapmak ve `hotels.json` dosyasını Storage’a yükleyip erişimini sağlamak.
+- Otel verilerini JSON formatında hazırlamak (mevcut 30 otel) ve Supabase Storage yapılandırmak.
+- `services/hotel_service.dart` içinde JSON’dan veya Storage’dan veri çekme işlemlerini kodlamak.
+- Tüm görselleri (otel, logo) Supabase Storage’a eklemek ve erişim linklerini düzenlemek.
+- `services/favorite_service.dart` (SharedPreferences tabanlı favori yönetimi) oluşturmak.
+
+---
+
+### 🧑‍🎨 Ogün Şahin
+
+**Görevler:**
+
+- Uygulama sayfalarının tasarımını (wireframe ve prototip) hazırlamak.
+- `about_page.dart` ve `contact_page.dart` UI/UX tasarımı.
+- Ekip üyelerinin avatarlarını ve “Biz Kimiz?” bölümünü düzenlemek.
+- `assets/images/avatar/omer.jpeg`, `ahmet.jpeg`, `ogun.jpeg` görsellerini hazırlayıp eklemek.
+- İletişim sayfasındaki formu ve tıklanabilir e-posta/telefon alanlarını tasarlamak.
+
+---
+
+## Gelecek Planları
+
+- Supabase Authentication veya Firebase ile kimlik doğrulama.
+- Otel rezervasyon özelliği eklenmesi.
+- Kullanıcı yorumları ve puanlama sistemi.
+- Harita entegrasyonu (Google Maps veya OpenStreetMap).
+- Çoklu dil desteği için tam işlevsellik.
+
+---
+
+## İletişim
+
+Proje hakkında geri bildirimde bulunmak için:
+
+- 📧 **E-posta:** [info@versushotels.com](mailto:info@versushotels.com)
+- 📞 **Telefon:** +90 123 456 7890
+- 💻 **GitHub:** [VersusHotels Repository](#) <!-- Gerçek link buraya eklenebilir -->
+
+---
  
   - ![image](https://github.com/user-attachments/assets/c9406979-ab4d-4259-9cd4-5d6db9a1d748)
   - ![image](https://github.com/user-attachments/assets/c1651f26-70a8-46c0-ada3-ed33053c9c1c)
