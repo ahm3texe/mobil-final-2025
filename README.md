@@ -1,204 +1,170 @@
-🏨 Hotel Explorer
+VersusHotels
 
- 
+VersusHotels, Flutter ve Dart kullanılarak geliştirilen, hem iOS hem de Android ortamında çalışan modern bir mobil otel karşılaştırma uygulamasıdır. Kullanıcılar, otelleri farklı kriterlere göre listeleyebilir, favorilere ekleyebilir, yan yana karşılaştırabilir ve ihtiyaçlarına göre en uygun seçeneği bulabilirler.
 
- 
-
- 
-
-Hotel Explorer, konaklama seçeneklerini keşfetmenizi, favorilerinizi saklamanızı ve birden fazla oteli ayrıntılı ölçütlerle karşılaştırmanızı sağlayan açık kaynaklı bir Flutter + Firebase uygulamasıdır. Mobil odaklı tasarlanan proje; güvenli kimlik doğrulama, gerçek-zamanlı veri güncellemeleri ve çevrimdışı önbellekleme özellikleri sunar.
-
-⸻
-
-🚀 Projenin Amacı
-
-Seyahate çıkmadan önce onlarca sekme arasında kaybolmak yerine tek bir yerden en uygun oteli bulmanızı hedefliyoruz. Hotel Explorer, otelleri; fiyat, puan, konum ve olanaklar bakımından filtreleyip karşılaştırır, favorilerinizi saklar ve not almanıza imkân tanır.
-
-⸻
-
-🎯 Öne Çıkan Özellikler
-	•	Firebase Authentication ile e-posta / Google oturum açma
-	•	Gerçek-zamanlı otel verisi & kullanıcı favorileri (Cloud Firestore)
-	•	Çevrimdışı önbellek ve local_storage_service ile hızlı açılış
-	•	Otel karşılaştırma modülü — fiyat, puan, olanak çizelgesi
-	•	Tema ayarları (karanlık / aydınlık) ve sezgisel UI
-	•	Brandfetch API ile otel/logo görselleri
-	•	Responsive tasarım (telefon & tablet)
-	•	Not alma özelliği (isteğe bağlı modül)
-
-⸻
-
-🛠️ Kurulum
-
-# 1. Depoyu klonla
-git clone https://github.com/<kullanici>/hotel_explorer.git
-cd hotel_explorer
-
-# 2. Paketleri indir
-flutter pub get
-
-# 3. Firebase'i kur
-flutterfire configure  # firebase_options.dart oluşturur
-
-# 4. Uygulamayı çalıştır
-flutter run # bağlı cihaz / emülatör
-
-Gereksinimler: Flutter 3.22.1 (stable), Dart 3.2.0, Firebase CLI v13+, Android Studio Giraffe veya VS Code + Flutter eklentisi.
-
-⸻
-
-🔰 Kullanım
-
-Akış	GIF / Ekran	Açıklama
-Giriş	assets/demo/login.gif	Kullanıcı e-posta & şifre ile oturum açar
-Otel Keşfet	assets/demo/browse.gif	Konum/fiyat filtreleri, sonsuz kaydırma
-Detay	assets/demo/detail.gif	Fotoğraf galerisi, harita & yorumlar
-Karşılaştır	assets/demo/compare.gif	Seçili otelleri yan yana karşılaştırır
-Favoriler	assets/demo/favorites.gif	Sık kullanılan oteller listesi
-
-Demo medya dosyaları assets/demo/ altında tutulur – CI pipeline’ınızda otomatik optimize edilir.
-
-⸻
-
-🖼️ Ekran Görüntüleri
-
-Login	Anasayfa	Detay	Karşılaştırma
-			
+İçindekiler
 
 
-⸻
+Genel Bakış
 
-📐 Mimarî ve Teknik Detaylar
+
+
+Özellikler
+
+
+
+Kurulum ve Çalıştırma
+
+
+
+Klasör Yapısı
+
+
 
 Kullanılan Teknolojiler
 
-Teknoloji	Sürüm	Amaç
-Flutter SDK	3.22.1	UI & iş mantığı
-Dart	3.2.0	Programlama dili
-Firebase Authentication	5.17.1	Kimlik doğrulama
-Cloud Firestore	5.15.1	Gerçek-zamanlı NoSQL veritabanı
-Provider	6.1.1	Durum yönetimi
-HTTP	1.2.1	REST istekleri
-Brandfetch API	v5	Logo & marka verisi
-image_picker	1.1.0	Galeri / kamera
-
-Katmanlı Yapı
-
-lib/
- ├── core/           # app_theme, app_router, constants
- ├── models/         # hotel.dart, user_model.dart …
- ├── services/       # auth_service.dart, hotel_service.dart …
- ├── providers/      # theme_provider.dart, compare_provider.dart …
- ├── widgets/        # reusable UI bileşenleri
- ├── pages/
- │   ├── auth/       # login_page.dart, register_page.dart
- │   └── home/       # home_page.dart, hotel_detail_page.dart …
- └── main.dart       # entrypoint
-
-Sayfalar ve Görevleri
-
-Dosya	Açıklama
-main.dart	Uygulamanın giriş noktası; Provider’lar & router
-home_page.dart	Ana keşif sayfası
-hotel_detail_page.dart	Otel ayrıntıları & rezervasyon
-favorites_page.dart	Favori oteller
-comparison_page.dart	Otel karşılaştırma matrisi
-about_page.dart	Uygulama / ekip bilgisi
-contact_page.dart	İletişim formu
-login_page.dart	Oturum açma
-register_page.dart	Hesap oluşturma
-forgot_password_screen.dart	Şifre sıfırlama
-notes_screen.dart	Kişisel notlar (opsiyonel)
-add_note_screen.dart	Yeni not modalı
-settings_screen.dart	Tema & profil
-
-Servisler
-
-Dosya	Tip	Sorumluluk
-auth_service.dart	Service	Firebase Authentication işlemleri
-favorite_service.dart	Service	Kullanıcının favori otellerini yönetir
-hotel_service.dart	Service	Otel verilerini API’den çeker & filtreler
-local_storage_service.dart	Service	Çevrimdışı önbellek
-firestore_service.dart	Service	Cloud Firestore CRUD
-logo_provider.dart	Provider	Brandfetch API
-theme_provider.dart	Provider	Tema yönetimi
-compare_provider.dart	Provider	Karşılaştırma listesi
-
-Veri Modelleri
-
-Model	Alanlar
-hotel.dart	id, name, location, price, rating, images, amenities
-user_model.dart	uid, email, displayName, photoUrl, favorites
-
-Widgetlar
-
-Widget	Açıklama
-custom_app_bar.dart	Özelleştirilmiş üst menü
-custom_drawer.dart	Yan menü & profil kartı
-hotel_card.dart	Özet otel kartı
-hotel_list_card.dart	Liste görünümü kartı
 
 
-⸻
-
-🔒 Güvenlik & Veri Saklama
-	•	Parola ve oturum anahtarları cihazda saklanmaz, Firebase tarafında korunur.
-	•	Tüm ağ çağrıları HTTPS üzerinden gerçekleştirilir.
-	•	Firestore verileri, yalnızca giriş yapmış kullanıcının kendi favorilerine erişebileceği şekilde güvenlik kurallarıyla sınırlandırılmıştır.
-	•	Yerel önbellek (SharedPreferences) şifrelenmiş olarak tutulur.
-
-Örnek Firestore dokümanı:
-
-// Koleksiyon: hotels
-{
-  "id": "otel_123",
-  "name": "Sea Breeze Resort",
-  "location": "Antalya, Türkiye",
-  "price": 135.00,
-  "rating": 4.6,
-  "amenities": ["wifi", "pool", "parking"],
-  "images": ["https://.../1.jpg", "https://.../2.jpg"],
-  "createdAt": 1717305600000
-}
+Ekip ve Görev DAğılımı
 
 
-⸻
 
-🗄️ Veritabanı Tasarımı
-
-Koleksiyon	DokümanID	Alanlar
-hotels	otel_<id>	name, location, price, rating, amenities, images
-users	<uid>	email, displayName, favorites
-favorites	<uid>_<otelId>	uid, hotelId, addedAt
+Gelecek Planları
 
 
-⸻
 
-👥 Katkıda Bulunanlar
+İletişim
 
-İsim	Rol
-@ahmet	Proje lideri, Flutter mimarisi
-@selin	Firebase & backend entegrasyonu
-@murat	UI/UX tasarımı & test
+Genel Bakış
 
-PR göndermeden önce lütfen CONTRIBUTING.md dosyasını okuyun. ✨
+VersusHotels, kullanıcıların ihtiyaç duyduğu tüm otel bilgilerini tek bir uygulamada toplar. Otelleri listeleyip:
 
-⸻
 
-📅 Yol Haritası
-	•	🔔 Push bildirimleri ekle
-	•	🌐 Çoklu dil (i18n)
-	•	🧪 Widget & entegre testler
-	•	🚀 CI/CD (GitHub Actions + Fastlane)
 
-⸻
 
-📜 Lisans
 
-Bu proje MIT Lisansı ile lisanslanmıştır – ayrıntılar için LICENSE dosyasına bakın.
+Favorilere ekleyebilir,
 
-⸻
 
-📫 İletişim
 
-Projeyle ilgili sorularınız için info@hotelexplorer.app adresine e-posta gönderebilir veya GitHub Issues üzerinden yazabilirsiniz.
+İki farklı oteli özellik bazında karşılaştırabilir,
+
+
+
+Otel detaylarını inceleyebilir,
+
+
+
+Basit bir iletişim formu aracılığıyla proje hakkında geri bildirimde bulunabilirler.
+
+Projede başlangıçta “dummy” (geçici) kimlik doğrulama (register/login) SharedPreferences üzerinden sağlanmıştır ve ileride Supabase veya gerçek bir backend çözümüne geçirilmeye hazır altyapı mevcuttur.
+
+Özellikler
+
+
+
+
+
+Kayıt & Giriş (Dummy Auth)
+
+
+
+
+
+Kullanıcılar e-posta ve şifre ile kayıt olabilir.
+
+
+
+Parola en az 6 karakter, 1 büyük harf, 1 rakam ve 1 özel karakter içermelidir.
+
+
+
+Giriş yapıldığında SharedPreferences’e e-posta saklanır.
+
+
+
+Anasayfa & Otel Listesi
+
+
+
+
+
+Oteller, Supabase Storage’dan çekilen bir hotels.json dosyası ile listelenir.
+
+
+
+“Detaylı Görünüm” ve “Liste Görünümü” arasında kolayca geçiş yapılabilir.
+
+
+
+Her otel için resim, isim, konum, yıldız sayısı ve fiyat bilgisi gösterilir.
+
+
+
+Favoriler Sayfası
+
+
+
+
+
+Kullanıcı favorilere eklediği otelleri görüntüler.
+
+
+
+Favoriden çıkarma işlemi kolayca yapılabilir.
+
+
+
+Otel Karşılaştırma
+
+
+
+
+
+İki farklı oteli yan yana, “Konum”, “Fiyat/Gece”, “Oda Türü”, “Yıldız”, “Puan”, “Havuz”, “Kahvaltı”, “Wi-Fi”, “Evcil Hayvan” gibi kriterlere göre karşılaştırır.
+
+
+
+Üst kısımda her iki otelin görsellerini gösterir; altta hangi otelin daha fazla özelliğe sahip olduğu hakkında öneri metni sunar.
+
+
+
+Otel Detay Sayfası
+
+
+
+
+
+Seçilen otelin geniş görsel, tüm temel bilgileri, olanakları ve yorum puanı detaylı gösterilir.
+
+
+
+Favori / Karşılaştırma butonları ile kullanıcı hızlıca işlem yapabilir.
+
+
+
+Hakkımızda & Ekip Tanıtımı
+
+
+
+
+
+Ömer, Ahmet ve Ogün’ün fotoğrafları, rolleri ve kısa biyografileri ile “Biz Kimiz?” bölümü.
+
+
+
+İletişim Formu
+
+
+
+
+
+Ad, e-posta ve mesaj alanları olan basit bir form.
+
+
+
+“Gönder” butonuna tıklanınca cihazın e-posta uygulaması açılır (mailto).
+
+
+
+Sayfanın alt kısmında tıklanabilir e-posta ve telefon numarası.
